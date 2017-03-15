@@ -9,7 +9,7 @@ function dwarfRollCall(dwarfArray) {
     for (let i = 0; i < dwarfArray.length; i++) { //setting counter to 0, loops over it the number/length of entire array; counter increments by 1 each time.
       dwarfNames.push(`${i+1}. ${dwarfArray[i]} `); //for each element in array, add number before item, add space after item.
     }
-  return dwarfNames.join('');
+  return dwarfNames.join('');//joins all elements of an array into a string; ('') "smushes" together but spacing in interpolation separates.
 }
 
 /*This function should accept an array of planeteer calls, like this:
@@ -33,9 +33,9 @@ should tell us if any of the calls are longer than four characters. Notice the
 return value of this method is either false or true, depending on the
 array it was given as an argument.*/
 
-function longPlaneteerCalls(words) {
-  for (let i = 0; i < words.length; i++) {
-    if (words[i].length > 4){//i accesses individual elements in words array
+function longPlaneteerCalls(calls) {
+  for (let i = 0; i < calls.length; i++) {
+    if (calls[i].length > 4){//i accesses individual elements in words array
       return true;//Here, the function ends as soon as the condition is true.
     }//In the solution code below, it has to run through the entire before returning true.
   }//This version is more efficient/less looping.
